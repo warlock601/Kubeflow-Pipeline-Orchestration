@@ -24,5 +24,31 @@ Kubeflow is not a single tool but rather a collection of components or projects 
   If a setp fails, Only failed step reruns — not whole pipeline. </br>
   Internally uses: Kubernetes pods, Argo-based execution model (in many Kubeflow versions), metadata tracking.
 
-- Katib: Katib is used for automated hyperparameter tuning. It runs multiple training experiments automatically to find best parameters. </br>
+- Katib: Katib is used for automated hyperparameter tuning. It runs multiple training experiments automatically to find best parameters. Hyperparameter tuning manually is expensive and slow, Katib automates search across compute resources. Useful when training large models where GPU time is expensive. </br>
+Katib automates hyperparameter optimization by launching multiple parallel training trials and selecting the best-performing configuration based on objective metrics. </br>
   <img width="478" height="638" alt="image" src="https://github.com/user-attachments/assets/1e0512ad-5201-4315-9111-e0bd37c3f255" />
+
+
+- KServe: KServe is used for serving trained ML models in production. This is where trained models become APIs. Supports Frameworks: TensorFlow, PyTorch, XGBoost, Scikit-learn
+  </br>
+  </br>
+  What it does?
+  </br>
+  Turns model into endpoint: </br>
+  ```bash
+  POST /predict
+  ```
+  Input: </br>
+  ```bash
+  {"features":[1.2,3.4,5.6]}
+  ```
+  Output: </br>
+  ```bash
+  {"prediction":"fraud"}
+  ```
+  Additional features that KServe provides:
+  - autoscaling
+  -  canary rollout
+  -  scale-to-zero
+  - inference graph
+  - model versioning </br>
