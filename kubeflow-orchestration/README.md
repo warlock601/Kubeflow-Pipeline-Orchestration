@@ -52,3 +52,9 @@ Katib automates hyperparameter optimization by launching multiple parallel train
   -  scale-to-zero
   - inference graph
   - model versioning </br>
+
+- Kubeflow Notebook Servers: Notebook Servers provide interactive development environments inside Kubernetes.Instead of local laptop training: You get cloud notebook connected directly to cluster resources. Basically we get Jupyter Notebook + GPU + PVC storage. </br>
+Each notebook will have separate pod, resource quotas, persistent storage, integrated with pipelines.</br>
+Notebook Servers provide containerized interactive ML development environments within Kubernetes, enabling isolated experimentation with controlled compute and storage.
+
+- Training Operators: Training Operators manage distributed ML training workloads on Kubernetes by orchestrating multi-pod framework-native jobs such as TensorFlow or PyTorch training. Training Operators are used to launch distributed training jobs on Kubernetes. They manage ML framework-specific training. Common operators support: TensorFlow, PyTorch, XGBoost, MPI.
