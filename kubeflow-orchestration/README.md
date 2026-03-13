@@ -11,7 +11,9 @@
 Machine Learning is a very iterative approach. That is why most of the ML Engineers have the model on their laptop but they do not ship it to production. Main reason for that is, initially the ML model efficiency may be high but as the new data keeps coming in, the efficiency keeps on reducing, hence they have to again train the model, tune it and then deploy it.
 
 ## Kubeflow
-Kubeflow is not a single tool but rather a collection of components or projects like Kubeflow Spark Operator, Kubeflow Trainer, Kubeflow Katib, KServe, Model Registry, Pipelines etc where each component aims at solving the oprations invloved in ML lifecycle.
+Kubernetes-native platform to develop, train, tune, deploy, and monitor ML models at scale (basically to implement & automate the ML lifecycle). Kubeflow is very tightly coupled with k8s. 
+Kubeflow is not a single tool but rather a collection of components or projects like Kubeflow Spark Operator, Kubeflow Trainer, Kubeflow Katib, KServe, Model Registry, Pipelines etc where each component aims at solving the oprations invloved in ML lifecycle. </br>
+The core of Kubeflow is to implement the ML Lifecycle on a k8s cluster. Each and every stage in Kubeflow runs as a pod in k8s.
 
 ### Important components of Kubeflow:
 - Kubeflow Pipelines: This is the workflow orchestration engine of Kubeflow. It allows you to define ML workflows as reproducible DAGs, where each stage runs as a Kubernetes container. </br>
@@ -58,3 +60,7 @@ Each notebook will have separate pod, resource quotas, persistent storage, integ
 Notebook Servers provide containerized interactive ML development environments within Kubernetes, enabling isolated experimentation with controlled compute and storage.
 
 - Training Operators: Training Operators manage distributed ML training workloads on Kubernetes by orchestrating multi-pod framework-native jobs such as TensorFlow or PyTorch training. Training Operators are used to launch distributed training jobs on Kubernetes. They manage ML framework-specific training. Common operators support: TensorFlow, PyTorch, XGBoost, MPI.
+</br>
+</br>
+It's not necessary that all the components have to be installed together only as a package. We can only have 1 component installed to meet our needs. Go to Kubeflow Projects > Select the project that you're instrested in.
+
