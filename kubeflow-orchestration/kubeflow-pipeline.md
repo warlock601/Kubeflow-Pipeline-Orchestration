@@ -107,4 +107,4 @@ python3 pipeline.py
 
 
 
-   
+6. What did we Achieved from all of this? So next time if Data Engineer or data scientists changes the dataset or they add new data to the dataset, they don't need to run the pipeline stages manually like Loading the data, then Training the data. They can just do the changes and then Create a new Run and run it. Then we can check the logs whether it improved the Model Accuracy or not.
