@@ -89,3 +89,12 @@ if __name__ == "__main__":
 ```bash
 python3 pipeline.py
 ```
+
+5. Then we create a pipeline in the Kubeflow UI. As soon as a pipeline is created, we will see a DAG. This is a graph which will tell what is the status of the execution and what is the flow of our pipeline execution as well.
+   <img width="962" height="672" alt="image" src="https://github.com/user-attachments/assets/dc384b3e-8cde-4de8-a924-53fa3eea018e" />
+   Then click "Create Run", there we will specify Pipeline, Experiment, SA, all the parameters. Then click on Start. We'll see pods related to our DAG will be running alongwith Implementation pod in the kubeflow namespace.
+   ```bash
+   kubectl get pods -n kubeflow
+   ```
+   Within Kubeflow UI, we can see Input/output, Task details, Logs related to this Run. Similarly if we create a new Run now, a new DAG and implementation pod will be created for that Run. 
+   
