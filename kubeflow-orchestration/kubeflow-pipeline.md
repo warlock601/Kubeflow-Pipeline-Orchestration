@@ -96,5 +96,15 @@ python3 pipeline.py
    ```bash
    kubectl get pods -n kubeflow
    ```
-   Within Kubeflow UI, we can see Input/output, Task details, Logs related to this Run. Similarly if we create a new Run now, a new DAG and implementation pod will be created for that Run. 
+   Within Kubeflow UI, we can see Input/output, Task details, Logs related to this Run. Similarly if we create a new Run now, a new DAG and implementation pod will be created for that Run. </br>
+   <img width="1090" height="702" alt="image" src="https://github.com/user-attachments/assets/cb0a089a-2bac-4e75-b665-bf0e08485f9d" />
+   <img width="1200" height="390" alt="image" src="https://github.com/user-attachments/assets/1f7b3945-a852-44b1-8d65-2f16f96bf074" />
+   </br>
+   <img width="1054" height="776" alt="image" src="https://github.com/user-attachments/assets/5a3ad861-2744-41aa-9933-743b6ccd2fbd" />
+   </br>
+   In logs, we can see the accuracy of the model: </br>
+   <img width="1062" height="744" alt="image" src="https://github.com/user-attachments/assets/b6b7d183-4696-4f46-80bc-2ade86d4c776" />
+
+
+
    
