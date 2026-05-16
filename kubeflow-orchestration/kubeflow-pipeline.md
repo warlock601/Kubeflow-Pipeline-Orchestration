@@ -1,7 +1,15 @@
 ## Kubeflow Pipeline setup
-First we need to have a k8s cluster setup, then in the cluster we can follow the steps provided here to install Kubeflow Pipelines:
-https://www.kubeflow.org/docs/components/pipelines/operator-guides/installation/    
-</br>
+
+Use this commands to install Kubefloe Pipelines:
+ ```bash
+export PIPELINE_VERSION=2.15.0
+kubectl apply -k "github.com/kubeflow/pipelines/manifests/kustomize/cluster-scoped-resources?ref=$PIPELINE_VERSION"
+kubectl wait --for condition=established --timeout=60s crd/applications.app.k8s.io
+```
+And then run this:
+```bash
+kubectl apply -k "github.com/kubeflow/pipelines/manifests/kustomize/env/platform-agnostic?ref=$PIPELINE_VERSION"
+```
 
 ### Working
 First developers/ML engineers/devops write a Python script. Then there is a Python package/module "kfp" which installed using pip. What it does is basically compiles the python script to yaml file and this yaml file is submitted to the k8s cluster. 
